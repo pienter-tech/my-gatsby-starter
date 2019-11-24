@@ -1,0 +1,27 @@
+@import "../variables";
+
+.u-container {
+  padding: 0 ms(2);
+
+  @include media('>xs') {
+    padding: 0 ms(4);
+  }
+
+  @include media('>s') {
+    max-width: $s;
+    //margin-left: auto;
+    //margin-right: auto;
+  }
+
+  @include media('>m') {
+    //max-width: $m;
+  }
+
+  @include media('>l') {
+    //max-width: $l;
+  }
+
+  @include media('>xl') {
+    //max-width: $xl;
+  }
+}

@@ -1,0 +1,62 @@
+@import "../variables";
+
+.c-logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  svg {
+    width: 100%;
+    height: auto;
+  }
+
+  .logo-svg-letters {
+    margin-top: 5%;
+    .fill {
+      fill: $dark;
+      stroke: $dark;
+      stroke-width: .2;
+    }
+  }
+
+  .logo-svg {
+    width: 75%;
+    .fill-main {
+      fill: $light;
+    }
+
+    .fill-accents {
+      fill: $dark;
+    }
+
+    .fill-accents-grey {
+      fill: gray;
+    }
+
+    .stroke {
+      fill: none;
+      stroke: $dark;
+      stroke-width: 0.5;
+      stroke-miterlimit: 10;
+    }
+  }
+
+  &--dark {
+    .logo-svg {
+      .fill-main {
+        fill: $dark;
+      }
+
+      .fill-accents {
+        fill: $light;
+      }
+
+      .fill-accents-grey {
+        fill: gray;
+      }
+
+      .stroke {
+        stroke: $light;
+      }
+    }
+  }
+}

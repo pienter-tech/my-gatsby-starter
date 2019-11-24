@@ -1,0 +1,47 @@
+@import "../variables";
+
+//BASE
+
+html {
+  font-family: $font-family;
+  font-size: ms(0);
+}
+
+input, textarea, button {
+  font-family: $font-family;
+}
+
+* > p, * > h2, * > h3 {
+  margin-top: 1em;
+}
+
+h1 {
+  @include text-crop;
+  font-size: ms(3);
+}
+
+h2 {
+  @include text-crop;
+  font-size: ms(2);
+}
+
+h3 {
+  @include text-crop;
+  font-size: ms(1);
+}
+
+p {
+  @include text-crop($body-line-height);
+  line-height: $body-line-height;
+  font-size: ms(0);
+}
+
+
+label, input, button, textarea {
+  font-size: ms(0);
+}
+
+small {
+  @include text-crop;
+  font-size: ms(-1);
+}

@@ -1,0 +1,23 @@
+@import "../variables";
+
+html {
+  background-color: $light;
+}
+
+//UTILITIES
+
+.u-bg-dark {
+  background-color: $dark;
+}
+
+.u-bg-light {
+  background-color: $light;
+}
+
+.u-txt-dark {
+  color: $dark;
+}
+
+.u-txt-light {
+  color: $light;
+}

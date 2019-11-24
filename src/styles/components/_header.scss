@@ -1,0 +1,41 @@
+@import "../variables";
+@import "../utilities/colors";
+@import "../utilities/container";
+
+.c-header {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: ms(1);
+  background-color: $light;
+  color: $dark;
+
+  &--dark {
+    background-color: $dark;
+    color: $light;
+  }
+
+  &__logo {
+    max-width: ms(13);
+  }
+
+  &__nav {
+    display: flex;
+    justify-content: center;
+    height: ms(2);
+    padding: 1em 0;
+  }
+
+  &__nav-item {
+    position: relative;
+    text-decoration: none;
+    color: $dark;
+    font-size: ms(1);
+    font-weight: bold;
+    padding: 0 .5em;
+    letter-spacing: .2em;
+    transition: font-size 1s linear, color 1s linear, transform 1s linear;
+  }
+}

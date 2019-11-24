@@ -1,0 +1,54 @@
+@import "../variables";
+
+.c-app-container {
+  display: flex;
+  height: 100%;
+  flex-flow: column nowrap;
+
+  @include media('>m') {
+    flex-flow: row-reverse nowrap;
+  }
+
+  &__header {
+    @include media('>m') {
+
+      width: $m;
+      flex-grow: 1;
+    }
+  }
+
+  &__main {
+    flex-grow: 1;
+    display: flex;
+    flex-flow: column nowrap;
+    @include media('>m') {
+      justify-content: center;
+      flex-grow: 0;
+      flex-shrink: 1;
+    }
+  }
+
+  &__content {
+    width: 100%;
+    padding: ms(2);
+
+    @include media('>m') {
+      width: $s;
+      padding: ms(2);
+      max-height: 100%;
+      -ms-overflow-style: none;
+      overflow-y: scroll;
+      scrollbar-width: none;
+
+      &::-webkit-scrollbar {
+        width: 0 !important
+      }
+    }
+  }
+
+
+  &--dark .c-app-container__main {
+    background-color: $dark;
+    color: $light;
+  }
+}

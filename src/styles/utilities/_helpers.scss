@@ -1,0 +1,19 @@
+@import "../variables";
+
+.u-relative {
+  position: relative;
+}
+
+@each $key, $val in $breakpoints {
+  .until-#{$key} {
+    @include media(">#{$key}") {
+      display: none;
+    }
+  }
+
+  .from-#{$key} {
+    @include media("<#{$key}") {
+      display: none;
+    }
+  }
+}
